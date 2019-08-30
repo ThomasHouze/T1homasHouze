@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h2>Twitter List</h2>
+
+<a href="/add">Add a Twitter</a><br />
+
+<div th:each="course : ${courses}">
+
+    <h4 th:inline="text">[[${flight.airline}]] from [[${flight.departure}]] to [[${flight.destination}]] at [[${flight.date}]]</h4>
+
+    <p th:text="${course.content}"></p>
+
+
+
+    <td>
+        <a th:href="@{/update/{id}(id=${course.id})}">Update</a>
+        <a th:href="@{/detail/{id}(id=${course.id})}">Details</a>
+        <a th:href="@{/delete/{id}(id=${course.id})}">Delete</a>
+
+
+
+    </td>
+
+
+</div>
+
+</body>
+</html>

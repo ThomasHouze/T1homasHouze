@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<body>
+
+
+<a href="/">Show All Twitter</a><br />
+
+<h2>Show All Twitter</h2>
+
+Content :<span th:text="${course.content}"></span><br />
+
+PostDate :<span th:text="${course.posteddate}"></span><br />
+
+
+SentBy :<span th:text="${course.sentby}"></span><br />
+
+
+<a th:href="@{/delete/{id}(id=${course.id})}">Delete this One</a>
+
+</body>
+
+</body>
+</html>
